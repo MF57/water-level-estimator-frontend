@@ -59,11 +59,13 @@ export class AppComponent {
             }
           },
           y: {
+            // beginAtZero: true,
             grid: {
               color: 'rgba(255,255,255,0.2)'
             },
             ticks: {
-              color: 'white'
+              color: 'white',
+              // stepSize: 120
             }
           },
         }
