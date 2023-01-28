@@ -13,6 +13,7 @@ export class AppComponent {
   public baseHref = window.location;
   invalid = false;
 
+  datePickerValue=['2017-09-13'];
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
@@ -76,6 +77,11 @@ export class AppComponent {
       this.chart.resize();
     });
     this.chart.data
+  }
+
+  setToday() {
+    this.changeDate({target:{value:"2017-09-13"}})
+    this.datePickerValue=['2017-09-13'];
   }
 
 }

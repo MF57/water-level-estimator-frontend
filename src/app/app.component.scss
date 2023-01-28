@@ -23,6 +23,13 @@
   margin-top: 40px;
   margin-left: 40px;
   background-color: #1e2d52;
+  display: flex;
+
+  button {
+    height: 40px;
+    margin-left: 20px;
+    margin-top: 23px;
+  }
 }
 
 .chart-container {
