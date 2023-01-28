@@ -11,6 +11,7 @@ import {DataService} from "./data.service";
 export class AppComponent {
   public chart: any;
   public baseHref = window.location;
+  invalid = false;
 
   constructor(private dataService: DataService) {}
 
@@ -21,6 +22,12 @@ export class AppComponent {
   }
 
   changeDate(event: any) {
+    const newDate = new Date(event.target.value);
+    if (newDate < new Date("2012-01-01") || newDate > new Date("2021-09-30")) {
+      this.invalid = true;
+      return
+    }
+    this.invalid = false;
     this.dataService.getData(event.target.value).subscribe(data => {
       this.chart.data = data;
       this.chart.update();
