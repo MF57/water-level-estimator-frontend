@@ -10,7 +10,7 @@ export class DataService {
   public getData(date: string): Observable<any> {
     let params = new HttpParams().set('date', date);
 
-    return this.client.get<{date: string, value: number, error: number}[]>("https://miedz.tegess.com/dupa", {params, responseType: 'json'}).pipe(
+    return this.client.get<{date: string, value: number, error: number}[]>("https://miedz.tegess.com/predict", {params, responseType: 'json'}).pipe(
       map(data => {
         return {// values on X-Axis
           labels: data.map(obj => obj.date),
