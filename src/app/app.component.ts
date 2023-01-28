@@ -57,7 +57,8 @@ export class AppComponent {
             },
             ticks: {
               color: 'white'
-            }
+            },
+            test: "Data"
           },
           y: {
             beginAtZero: true,
@@ -67,7 +68,8 @@ export class AppComponent {
             ticks: {
               color: 'white',
               // stepSize: 120
-            }
+            },
+            text: "Poziom wody [cm]"
           },
         }
       }
