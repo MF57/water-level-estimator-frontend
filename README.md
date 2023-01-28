@@ -1,27 +1,32 @@
-# WaterLevelEstimatorFrontend
+# WLEW - Water Level Estimation Webapp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.3.
+Frontend aplikacji webowej, która pozwala na estymację poziomu wody na rzece Odrze na
+podstawie opadów ze stacji pomiarowych.
 
-## Development server
+## Dostęp do aplikacji
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Aplikacja jest dostępna pod adresem: https://mf57.github.io/water-level-estimator-frontend/
 
-## Code scaffolding
+## Wykorzystane technologie
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* Angular 15
+* SCSS
+* Chart.JS
 
-## Build
+## Funkcjonalności aplikacji
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+![screen](./webapp.png)
 
-## Running unit tests
+Aplikacja wizualizuje estymowany poziom wody w rzece Odrze od zadanej daty przez kolejne
+7 dni.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Biała linia wyznacza predykcję modelu, natomiast pomarańczowe pole niepewność predykcji.
+Warto zauważyć, że im odleglejsza data, tym niepewność predykcji zwiększa się.
 
-## Running end-to-end tests
+Datę można wybierać za pomocą datepickera. Obecnie możliwe do wybrania są wyłącznie daty z zakresu danych, które otrzymaliśmy, czyli
+2012-01-01 do 2021-09-30
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Jako, że przewidujemy iż najczęściej będzie podglądana predykcja od dnia dzisiejszego, to dodaliśmy przycisk 'Dzisiaj', który ustawia
+zadaną datę na aktualny dzień. Ponieważ dzisiejszy dzień znajduje się poza zakresem dostarczonych danych, to przycisk 'Dzisiaj' ustawia datę 2017-09-13
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
