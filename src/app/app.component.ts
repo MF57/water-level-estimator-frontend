@@ -16,7 +16,7 @@ export class AppComponent {
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
-    this.dataService.getData("2018-10-05").subscribe(data => {
+    this.dataService.getData("2017-09-13").subscribe(data => {
       this.createChart(data);
     })
   }
@@ -59,7 +59,7 @@ export class AppComponent {
             }
           },
           y: {
-            // beginAtZero: true,
+            beginAtZero: true,
             grid: {
               color: 'rgba(255,255,255,0.2)'
             },
