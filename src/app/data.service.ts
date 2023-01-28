@@ -17,14 +17,14 @@ export class DataService {
 
           datasets: [
             {
-              label: 'Minimalna niepewność',
+              label: 'Minimalny przewidywany poziom wody',
               data: data.map(obj => obj.value - obj.error),
               borderColor: '#f19551',
               cubicInterpolationMode: 'default',
               fill: true,
             },
             {
-              label: "Przewidywany poziom Wody",
+              label: "Przewidywany poziom wody",
               data: data.map(obj => obj.value),
               borderColor: 'white',
               cubicInterpolationMode: 'default',
@@ -33,7 +33,7 @@ export class DataService {
               pointHoverRadius: 15,
             },
             {
-              label: 'Maksymalna niepewność',
+              label: 'Maksymalny przewidywany poziom wody',
               data: data.map(obj => obj.value + obj.error),
               borderColor: '#f19551',
               cubicInterpolationMode: 'default',
