@@ -62,10 +62,10 @@ export class AppComponent {
         }
       }
     });
-    const gradient = this.chart.ctx.createLinearGradient(0, 0, 0, this.chart.height);
-    gradient.addColorStop(0, 'rgba(255, 0, 0, 0)');
-    gradient.addColorStop(1, 'rgba(255, 0, 0, 1)');
-    data.datasets[0].backgroundColor = gradient;
+
+    window.addEventListener('afterprint', () => {
+      this.chart.resize();
+    });
     this.chart.data
   }
 

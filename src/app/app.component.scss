@@ -53,14 +53,19 @@
     margin-left: 0;
     margin-right: 0;
   }
+  ibm-date-picker {
+    text-align: center;
+  }
+
+  ::ng-deep .bx--form-item {
+    display: flex;
+    align-items: center;
+  }
+;
 
   .chart-container {
     margin-top: 20px;
     margin-left: 0;
     margin-right: 0;
-    width: 100%;
-    canvas: {
-      width: 100%;
-    }
   }
 }
