@@ -2,6 +2,10 @@
   <img class='logo' src="{{baseHref}}assets/logo_cuvalley.png">
   Water Level Estimator
 </header>
+
+<div class="input">
+  <ibm-date-picker label="Wybierz datę" [dateFormat]="'Y-m-d'" [value]="['2018-10-05']" (change)="changeDate($event)"></ibm-date-picker>
+</div>
 <div class="chart-container">
   <canvas  id="MyChart" >{{ chart }}</canvas>
 </div>

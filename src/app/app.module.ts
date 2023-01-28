@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import {IconModule, UIShellModule} from "carbon-components-angular";
+import {DatePickerModule, IconModule, UIShellModule} from "carbon-components-angular";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -10,6 +11,8 @@ import {IconModule, UIShellModule} from "carbon-components-angular";
   ],
   imports: [
     UIShellModule,
+    DatePickerModule,
+    HttpClientModule,
     IconModule,
     BrowserModule
   ],
